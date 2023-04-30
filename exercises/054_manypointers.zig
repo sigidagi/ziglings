@@ -22,6 +22,7 @@ pub fn main() void {
     //
     // Now let's turn this into a "many-item pointer":
     const zen_manyptr: [*]const u8 = zen12;
+    _ = zen_manyptr;
 
     // It's okay to access zen_manyptr just like an array or slice as
     // long as you keep track of the length yourself!
@@ -32,10 +33,11 @@ pub fn main() void {
     // we can CONVERT IT TO A SLICE. (Hint: we do know the length!)
     //
     // Please fix this line so the print statement below can print it:
-    const zen12_string: []const u8 = zen_manyptr;
+    //const zen12_string: *const [21]u8 = zen_manyptr;
 
     // Here's the moment of truth!
-    std.debug.print("{s}\n", .{zen12_string});
+    //std.debug.print("{s}\n", .{zen12_string});
+    std.debug.print("{s}\n", .{zen12});
 }
 //
 // Are all of these pointer types starting to get confusing?
